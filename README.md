@@ -81,6 +81,21 @@ npm run dev
 
 Frontend runs at `http://localhost:5173` and backend at `http://localhost:5000`.
 
+### 3) One-command Local Preview
+
+After both backend and frontend dependencies are installed, run:
+
+```bash
+./preview.sh
+```
+
+This starts both services together:
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:5000`
+
+Stop both with `Ctrl+C`.
+
+
 ## Implemented API Endpoints
 
 - `POST /auth/signup`
@@ -108,3 +123,7 @@ Admin basics:
 ## Notes
 - This starter uses dummy lesson data via seed script.
 - Add role-based auth for admin endpoints in production.
+
+
+## Troubleshooting
+- If `npm install` fails with `403 Forbidden`, your environment/network policy is blocking package registry access. Run the project from a machine/network that allows npm registry downloads.
